@@ -3,68 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entre Bandeiras - Loja de Camisetas exclusivas para torcedores">
-  <title>Entre Bandeiras - Loja de Camisetas</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Entre Bandeiras</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+    }
+
+    header{
+      background:black;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    nav{
+      background:#d60000;
+      padding:12px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+    }
+
+    section{
+      padding:40px 20px;
+    }
+
+    .banner{
+      text-align:center;
+      background:white;
+    }
+
+    .produtos{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      background:white;
+      width:250px;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+      text-align:center;
+    }
+
+    .card h3{
+      margin-top:0;
+    }
+
+    .preco{
+      color:#d60000;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    footer{
+      background:black;
+      color:white;
+      text-align:center;
+      padding:15px;
+      margin-top:30px;
+    }
+  </style>
 </head>
+
 <body>
-  <header role="banner">
+
+  <header>
     <h1>Entre Bandeiras</h1>
-    <p>Loja de Camisetas Exclusivas</p>
+    <p>Loja de Camisetas</p>
   </header>
 
-  <nav role="navigation" aria-label="Menu Principal">
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#produtos">Produtos</a></li>
-      <li><a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#produtos">Produtos</a>
   </nav>
 
-  <main>
-    <!-- SEÇÃO 1: BANNER -->
-    <section id="inicio" class="banner">
-      <h2>Camisetas exclusivas para torcedores</h2>
-      <p>Estilo, conforto e paixão pelo esporte em cada peça</p>
-      <button class="cta-button" onclick="document.getElementById('produtos').scrollIntoView({behavior: 'smooth'})">
-        Explorar Produtos
-      </button>
-    </section>
+  <!-- TELA 1 -->
+  <section class="banner" id="inicio">
+    <h2>Camisetas exclusivas para torcedores</h2>
+    <p>
+      Estilo, conforto e paixão pelo esporte.
+    </p>
+  </section>
 
-    <!-- SEÇÃO 2: PRODUTOS -->
-    <section id="produtos" class="produtos-section">
-      <h2>Nossos Produtos</h2>
-      <div class="produtos-grid" id="produtos-container">
-        <!-- Produtos carregados dinamicamente via JavaScript -->
+  <!-- TELA 2 -->
+  <section id="produtos">
+    <h2 style="text-align:center;">Nossos Produtos</h2>
+
+    <div class="produtos">
+
+      <div class="card">
+        <h3>Camiseta Vermelha</h3>
+        <p>Modelo esportivo confortável.</p>
+        <p class="preco">R$ 79,90</p>
       </div>
-    </section>
 
-    <!-- SEÇÃO 3: CARRINHO -->
-    <section id="carrinho" class="carrinho-section">
-      <h2>Seu Carrinho</h2>
-      <div id="carrinho-container" class="carrinho-vazio">
-        <p>Seu carrinho está vazio</p>
+      <div class="card">
+        <h3>Camiseta Preta</h3>
+        <p>Modelo casual premium.</p>
+        <p class="preco">R$ 89,90</p>
       </div>
-    </section>
 
-    <!-- SEÇÃO 4: CONTATO -->
-    <section id="contato" class="contato-section">
-      <h2>Entre em Contato</h2>
-      <form id="contato-form">
-        <input type="text" placeholder="Seu Nome" required>
-        <input type="email" placeholder="Seu Email" required>
-        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-        <button type="submit" class="submit-button">Enviar</button>
-      </form>
-    </section>
-  </main>
+      <div class="card">
+        <h3>Camiseta Branca</h3>
+        <p>Estilo moderno e leve.</p>
+        <p class="preco">R$ 69,90</p>
+      </div>
 
-  <footer role="contentinfo">
-    <p>&copy; 2026 Entre Bandeiras - Todos os direitos reservados</p>
-    <p>Desenvolvido com ❤️ para torcedores</p>
+    </div>
+  </section>
+
+  <footer>
+    ©️ Entre Bandeiras
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
